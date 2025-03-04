@@ -1,0 +1,297 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/typography' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+
+/*BANNER*/
+main{
+    .banner{
+        background-image: url('../assets/images/pictures/Background.png');
+        height:80vh;
+        width: 100%;
+        background-size: cover;
+        .row-banner{
+            display: flex;
+            justify-content: center;
+            padding-top:10rem;
+            .content{
+                width: 60%;
+                margin :auto;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                .row-bloc{ /*Setting flexbox */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap:3rem;
+                    .column{
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+                        /*Setting left columns*/
+                        .element:first-child{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap:2rem;
+                            .img{
+                                display: flex;
+                                justify-content: center;
+                                img:first-child{
+                                    width:50px;
+                                }
+                                img:last-child{
+                                    width:80px;
+                                }
+                            }
+                            /*button here*/
+                        }
+                        /*Setting right columns*/
+                        .element:nth-child(2){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap:2rem;
+                            .img{
+                                display: flex;
+                                img:first-child{
+                                    width:50px;
+                                }
+                                img:nth-child(2){
+                                    width:80px;
+                                }
+                                img:last-child{
+                                    width:80px;
+                                }
+                            }
+                            /*button here*/
+                        }
+                    }  
+                }
+                .lines{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    p{
+                        color: $third-color-txt;
+                        font-family: $font-family-secondary;
+                    }
+                } 
+                .img-all{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width:50px;
+                    }
+                }
+                .row{
+                    display: flex;
+                    justify-content: center;
+                    a{
+                        @include mixin-remove-link-style;
+                        font-family: $font-family-secondary;
+                        text-transform: capitalize;
+                        font-size: 1.2rem;
+                    }
+                }                       
+            } 
+        }
+    }    
+}
+@media(max-width:768px){
+    .row-bloc .column {
+        flex-direction: column; /* Empile les éléments */
+        align-items: center;
+    }
+
+    .row-bloc .column .element {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row-bloc .column .element:first-child {
+        display: none; /* Cache la première colonne */
+    }
+
+    .row-bloc .column .element:nth-child(2) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .row-bloc .column .element:nth-child(2) .img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .row-bloc .column .element:nth-child(2) .btn-cta {
+        margin-top: 20px;
+    }
+}
+/*TRENDING*/
+main{
+    .trending{
+        background-color: $background-color-primary;
+        .container{
+            width: 90%;
+            margin:auto;
+            padding-bottom: 10rem;
+            .row{
+                padding:10rem 0 4rem 0;
+                width:100%;
+                display: flex;
+                justify-content: center;
+                h1{
+                    font-family: $font-family-secondary;
+                    font-size: 30px;
+                    color: $primary-color-txt;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                }
+            }
+            nav {
+                padding-bottom: 2rem;
+                width:50%;
+                margin:auto;
+                ul{
+                    display: flex;
+                    justify-content:space-between;
+                    list-style: none;
+
+                    a{
+                        @include mixin-remove-link-style;
+                        text-transform:uppercase;
+                        list-style: none;
+                        font-size: 1.2rem;
+                        font-family: $font-family-secondary;
+                        padding-bottom:0.5rem;
+                    }
+                }
+                ul li:first-child a{
+                    border-bottom: 5px solid white;
+                }
+                
+            }
+            .img-movies {
+                display: flex;
+                justify-content: center;
+                width:100%;
+                flex-wrap:wrap;
+                gap:2rem;
+                img{
+                    width:calc(90%/3);
+                }
+            }
+        }    
+    }    
+}
+
+
+/*PLAN*/
+main{
+    .plan{
+        background-color: $background-color-primary;
+        .container{
+            width: 66%;
+            margin:auto;
+            .plan-header { /*Settings Choose your plan & Switch or cancel anytimes*/
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap:1rem;
+                h2{
+                    @include mixin-h2-style;
+                    text-transform: capitalize;
+                    color: $primary-color-txt;
+                }
+                p{
+                    font-family: $font-family-secondary;
+                    font-family: 1.25rem;
+                    color: $third-color-txt;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                    .capitalize {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .row:nth-child(2){ /*Settings Toggle*/
+                display: flex;
+                justify-content: center;
+                .toggle{
+                    border-radius:5rem;
+                    background-color: $secondary-color-btn ;
+                    width:21%;
+                    height: 3rem;;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    gap: 1.5rem;
+                    text-transform: capitalize;   
+                    font-family:$font-family-secondary;
+                    color: $primary-color-txt;
+                    margin-bottom: 1.5rem;
+                    .opt1{
+                        border-radius:5rem;
+                        background-color: $primary-color-btn ;
+                        padding: 0.55rem 0.4rem;
+                    }
+                }
+            }
+            .row:nth-child(3){ /*Settings Cards products*/
+                width:100%;
+                display: flex;
+                justify-content: space-evenly;
+                gap:2rem;
+                /* Here card style in -product-card*/
+            }  
+            .plan-footer{
+                font-size: 0.8rem;
+                font-family: $font-family-secondary;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0 3rem 0;
+                span{
+                    text-transform: capitalize;
+                }
+                p:first-child{
+                    color: $third-color-txt;
+                }
+                p:last-child{
+                    color: $primary-color-txt;
+                }
+            }
+        }
+    }
+}
+
+/*FOOTER*/
+footer{
+    background-color: $background-color-primary;
+    .container{
+        width: 100%;
+        .row{
+            display:flex;
+            justify-content: center; 
+            img{
+                width: 8%;
+            }    
+        }
+        .row{
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                @include mixin-remove-link-style;
+                }
+            }
+        }
+    }
+}
+

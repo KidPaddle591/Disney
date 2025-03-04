@@ -1,0 +1,59 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/typography' as *;
+@use '../../abstracts/colors' as *;
+.card{
+    height:33rem;
+    padding: 3rem;
+    border: 1px solid white;
+    .logo{ /* Settings Logos row*/
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        margin-bottom: 3rem;
+        img{
+            width:3rem;
+        }
+    }
+    .description-product{ /* Settings Plan description*/
+        h3{
+            font-family: $font-family-primary;
+            font-size: 1.80rem;
+            color: $primary-color-txt;
+            text-transform: capitalize;
+        }
+        p{
+            font-family: $font-family-secondary;
+            font-size: 1rem;
+            color: $secondary-color-txt;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+        }
+        ul{
+            list-style-image: url('/assets/images/icons/tick.png');
+            font-family: $font-family-secondary;
+            li{
+                color: $third-color-txt ;
+                span{
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .price-button { /* Settings row price & button*/
+        margin: 2rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        p{
+            span:first-child{
+            color: $primary-color-txt;
+            font-family: $font-family-primary ;
+            font-size: $font-size-price;
+            }
+            span:last-child{
+            color: $third-color-txt;
+            font-family: $font-family-secondary ;
+            }
+        }
+    }
+}

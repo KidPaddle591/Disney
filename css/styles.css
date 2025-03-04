@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/*@mixin mixin-button-login{
+    font-family: $font-family-secondary;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    padding: 1rem;
+    border: 1px solid $primary-color-txt;
+    border-radius: 5px;
+    text-decoration: none;
+    color:$primary-color-txt;
+    background-color: $background-color-primary;
+    text-transform: uppercase;
+}*/
+/*@mixin mixin-btn-cta{
+    font-family: $font-family-secondary;
+    letter-spacing: 1px;
+    font-size: $font-size-bnt-cta;
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 5px;
+    background-color: $color-bg-btncta;
+    text-transform: uppercase;
+    @include mixin-remove-link-style;
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .container-fluid {
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+}
+header .container-fluid .row {
+  width: 98%;
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+  /*Button login here*/
+}
+
+.card {
+  height: 33rem;
+  padding: 3rem;
+  border: 1px solid white;
+}
+.card .logo { /* Settings Logos row*/
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.card .logo img {
+  width: 3rem;
+}
+.card .description-product { /* Settings Plan description*/ }
+.card .description-product h3 {
+  font-family: "avenir-black";
+  font-size: 1.8rem;
+  color: white;
+  text-transform: capitalize;
+}
+.card .description-product p {
+  font-family: "avenir-book";
+  font-size: 1rem;
+  color: #F9F9F9;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.card .description-product ul {
+  list-style-image: url("/assets/images/icons/tick.png");
+  font-family: "avenir-book";
+}
+.card .description-product ul li {
+  color: #C0C0C0;
+}
+.card .description-product ul li span {
+  text-transform: capitalize;
+}
+.card .price-button { /* Settings row price & button*/
+  margin: 2rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card .price-button p span:first-child {
+  color: white;
+  font-family: "avenir-black";
+  font-size: 1.8rem;
+}
+.card .price-button p span:last-child {
+  color: #C0C0C0;
+  font-family: "avenir-book";
+}
+
+.btn-cta a {
+  font-family: "avenir-book";
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  padding: 1rem 5rem 1rem 5rem;
+  border-radius: 5px;
+  background-color: #0063E5;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.button-login {
+  font-family: "avenir-book";
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+}
+
+/*BANNER*/
+main .banner {
+  background-image: url("../assets/images/pictures/Background.png");
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+}
+main .banner .row-banner {
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+}
+main .banner .row-banner .content {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .banner .row-banner .content .row-bloc { /*Setting flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+main .banner .row-banner .content .row-bloc .column {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /*Setting left columns*/
+  /*Setting right columns*/
+}
+main .banner .row-banner .content .row-bloc .column .element:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /*button here*/
+}
+main .banner .row-banner .content .row-bloc .column .element:first-child .img {
+  display: flex;
+  justify-content: center;
+}
+main .banner .row-banner .content .row-bloc .column .element:first-child .img img:first-child {
+  width: 50px;
+}
+main .banner .row-banner .content .row-bloc .column .element:first-child .img img:last-child {
+  width: 80px;
+}
+main .banner .row-banner .content .row-bloc .column .element:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /*button here*/
+}
+main .banner .row-banner .content .row-bloc .column .element:nth-child(2) .img {
+  display: flex;
+}
+main .banner .row-banner .content .row-bloc .column .element:nth-child(2) .img img:first-child {
+  width: 50px;
+}
+main .banner .row-banner .content .row-bloc .column .element:nth-child(2) .img img:nth-child(2) {
+  width: 80px;
+}
+main .banner .row-banner .content .row-bloc .column .element:nth-child(2) .img img:last-child {
+  width: 80px;
+}
+main .banner .row-banner .content .lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .banner .row-banner .content .lines p {
+  color: #C0C0C0;
+  font-family: "avenir-book";
+}
+main .banner .row-banner .content .img-all {
+  display: flex;
+  justify-content: center;
+}
+main .banner .row-banner .content .img-all img {
+  width: 50px;
+}
+main .banner .row-banner .content .row {
+  display: flex;
+  justify-content: center;
+}
+main .banner .row-banner .content .row a {
+  text-decoration: none;
+  color: white;
+  font-family: "avenir-book";
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .row-bloc .column {
+    flex-direction: column; /* Empile les éléments */
+    align-items: center;
+  }
+  .row-bloc .column .element {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .row-bloc .column .element:first-child {
+    display: none; /* Cache la première colonne */
+  }
+  .row-bloc .column .element:nth-child(2) {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .row-bloc .column .element:nth-child(2) .img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .row-bloc .column .element:nth-child(2) .btn-cta {
+    margin-top: 20px;
+  }
+}
+/*TRENDING*/
+main .trending {
+  background-color: black;
+}
+main .trending .container {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10rem;
+}
+main .trending .container .row {
+  padding: 10rem 0 4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .trending .container .row h1 {
+  font-family: "avenir-book";
+  font-size: 30px;
+  color: white;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+main .trending .container nav {
+  padding-bottom: 2rem;
+  width: 50%;
+  margin: auto;
+}
+main .trending .container nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+main .trending .container nav ul a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: "avenir-book";
+  padding-bottom: 0.5rem;
+}
+main .trending .container nav ul li:first-child a {
+  border-bottom: 5px solid white;
+}
+main .trending .container .img-movies {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+main .trending .container .img-movies img {
+  width: 30%;
+}
+
+/*PLAN*/
+main .plan {
+  background-color: black;
+}
+main .plan .container {
+  width: 66%;
+  margin: auto;
+}
+main .plan .container .plan-header { /*Settings Choose your plan & Switch or cancel anytimes*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+main .plan .container .plan-header h2 {
+  font-family: "avenir-black";
+  font-size: 2.68rem;
+  margin: auto;
+  text-transform: capitalize;
+  color: white;
+}
+main .plan .container .plan-header p {
+  font-family: "avenir-book";
+  font-family: 1.25rem;
+  color: #C0C0C0;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+main .plan .container .plan-header p .capitalize {
+  text-transform: capitalize;
+}
+main .plan .container .row:nth-child(2) { /*Settings Toggle*/
+  display: flex;
+  justify-content: center;
+}
+main .plan .container .row:nth-child(2) .toggle {
+  border-radius: 5rem;
+  background-color: #2B2D37;
+  width: 21%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-transform: capitalize;
+  font-family: "avenir-book";
+  color: white;
+  margin-bottom: 1.5rem;
+}
+main .plan .container .row:nth-child(2) .toggle .opt1 {
+  border-radius: 5rem;
+  background-color: #0063E5;
+  padding: 0.55rem 0.4rem;
+}
+main .plan .container .row:nth-child(3) { /*Settings Cards products*/
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  /* Here card style in -product-card*/
+}
+main .plan .container .plan-footer {
+  font-size: 0.8rem;
+  font-family: "avenir-book";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 3rem 0;
+}
+main .plan .container .plan-footer span {
+  text-transform: capitalize;
+}
+main .plan .container .plan-footer p:first-child {
+  color: #C0C0C0;
+}
+main .plan .container .plan-footer p:last-child {
+  color: white;
+}
+
+/*FOOTER*/
+footer {
+  background-color: black;
+}
+footer .container {
+  width: 100%;
+}
+footer .container .row {
+  display: flex;
+  justify-content: center;
+}
+footer .container .row img {
+  width: 8%;
+}
+footer .container .row ul {
+  display: flex;
+  list-style: none;
+}
+footer .container .row ul li {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */

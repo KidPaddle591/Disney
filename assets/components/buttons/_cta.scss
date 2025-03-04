@@ -1,0 +1,31 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/typography' as *;
+@use "../../abstracts/mixins" as *;
+@use '../../abstracts/colors' as *;
+
+.btn-cta{
+    a{
+        font-family: $font-family-secondary;
+        letter-spacing: 1px;
+        font-size: $font-size-bnt-cta;
+        padding: 1rem 5rem 1rem 5rem;
+        border-radius: 5px;
+        background-color: $color-bg-btncta;
+        text-transform: uppercase;
+        @include mixin-remove-link-style;
+    }
+}
+
+.button-login{
+    font-family: $font-family-secondary;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    padding: 1rem;
+    border: 1px solid $primary-color-txt;
+    border-radius: 5px;
+    text-decoration: none;
+    color:$primary-color-txt;
+    background-color: $background-color-primary;
+    text-transform: uppercase;
+}
+

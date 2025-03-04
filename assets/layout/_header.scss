@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/typography" as *;
+header {
+    .container-fluid{
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        top:0;
+        .row{
+            width:98%;
+            display: flex;
+            justify-content: right;
+            margin-top: 1rem;
+            /*Button login here*/
+        }
+    
+    }
+}
